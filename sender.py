@@ -58,7 +58,6 @@ class newEmail(Login):
 			- message'''
 	def __init__(self, gmail, account):
 		Tk.__init__(self)
-		self.wm_iconbitmap("icono.ico")
 		self.resizable(0,0)
 		self.title("New Email")
 		self.config(bg="black")
