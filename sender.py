@@ -15,7 +15,6 @@ class Login(Tk):
 			showerror("Fatal Error", str(e))
 			exit()
 		Tk.__init__(self)
-		self.wm_iconbitmap("icon.ico")
 		#self.geometry("268x157")
 		self.resizable(0,0)
 		self.title("e-Sender")
