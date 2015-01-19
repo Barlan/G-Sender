@@ -19,26 +19,22 @@ class Login(Tk):
 		self.resizable(0,0)
 		self.title("e-Sender")
 		self.config(bg="black")
-		gif1 = PhotoImage(file="head.gif")
-		label1 = Label(self, image=gif1, justify=CENTER, bg="black")
-		label1.image = gif1
-		label1.grid(row = 0, column = 0,columnspan=2, sticky=NSEW)
-
+		
 		me = StringVar()
 		mp = StringVar()
-		Label(self, text="Your Gmail account:", bg="black", fg="green").grid(row = 1, column = 0, sticky=W)
+		Label(self, text="Your Gmail account:", bg="black", fg="green").grid(row = 0, column = 0, sticky=W)
 		self.my_email = Entry(self, textvariable=me, width = 25)
-		self.my_email.grid(row = 1, column = 1)
+		self.my_email.grid(row = 0, column = 1)
 
-		Label(self, text="Your Password:", bg="black", fg="green").grid(row = 2, column = 0, sticky=W)
+		Label(self, text="Your Password:", bg="black", fg="green").grid(row = 1, column = 0, sticky=W)
 		self.my_passw = Entry(self, textvariable=mp, width = 25)
-		self.my_passw.grid(row = 2, column = 1)
+		self.my_passw.grid(row = 1, column = 1)
 
 		self.email_button = Button(self, text="Enter", command=self.login_gmail, bg="black", fg="green")
-		self.email_button.grid(row = 3, column = 0, sticky=NSEW)
+		self.email_button.grid(row = 2, column = 0, sticky=NSEW)
 
 		salir = Button(self, text="Exit", command=self.quit, bg="black", fg="red")
-		salir.grid(row = 3, column = 1, sticky=NSEW)
+		salir.grid(row = 2, column = 1, sticky=NSEW)
 
 	def login_gmail(self):
 		account = self.my_email.get()
